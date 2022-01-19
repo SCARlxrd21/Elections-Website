@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <title>verify</title>
+	<style>
+		footer{
+			margin-top:410px;
+		}
+	</style>
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-expand-md navbar-light text-gray-700 body-font bg-gray-200 container-fluid">	
+    <span class="flex title-font font-medium items-center text-gray-900 mb-0 ml-0 md:mb-0 " id="logo">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSOs9y-Rohp00jwfpWBvXiOBiN9xsGFd3y13A&usqp=CAU" class="w-10 h-10 p-0 mt-2 mb-2  rounded-full logod" >
+      <span class="ml-1 mr-20 text-xl ">IIPE</span>
+    </span>
+	 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item hover:text-gray-900">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item hover:text-gray-900">
+                    <a class="nav-link" href="/">About</a>
+                </li>
+                <li class="nav-item hover:text-gray-900">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+            </ul>
+          	      <div class="lg:w-2/5 inline-flex lg:justify-end mr-10 lg:ml-0">
+      <a href="/log" class=" btn inline-flex items-center border-0 py-1 px-1 focus:outline-none hover:bg-gray-400 rounded text-base mt-0 md:mt-0">
+		  Auth Login
+        <svg style="display:inline;"fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24     24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+        </div>
+	</nav>
+	
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+<!-- <div class="container mt-100">
+	<form class="ui form container-fluid mt-100" action="/verify" method="post">
+	name: <input type="string" name="nam" placeholder="email">
+	key:   <input type="string" name="key" placeholder="mailed key">
+	<button type="submit">
+		Submit
+	</button>
+</form>
+
+
+	</div>	 -->
+	 <div class="container mt-8">
+	    <% if(message && message.length > 0 ){ %>
+	 	<div class="alert alert-danger" role="alert">
+                <%= message %>
+        </div>
+	    <% }%>
+  </div>
+	
+	<div class="container">
+		<form class="ui form container-fluid px-50" action="/verify" method="post">
+  <div class="field">
+    <label>Username</label>
+    <input type="email" name="nam" placeholder="Mail-id">
+  </div>
+  <div class="field">
+    <label>Key</label>
+    <input type="text" name="key" placeholder="mailed key">
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>
+	</div>
+
+	
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------ -->	
+	
+<footer class="text-gray-700 body-font foot">
+    <div class="bg-gray-200">
+    <div class=" mx-auto py-3 px-3 flex d-flex justify-content-end flex-wrap flex-col sm:flex-row">	
+      <p class="text-gray-500 text-sm mr-3 text-center sm:text-left mb-0">© 2020 iipe.ac.in —
+        <a href="/" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@scarlxd21_apurv097</a>
+      </p>
+    
+    </div>
+  </div>
+</footer>	
+	
+	   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	
+	</body>
+</html>	
