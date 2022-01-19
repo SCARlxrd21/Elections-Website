@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+
+	<style>
+		footer{
+			margin-top:200px;
+		}
+		.form{
+			margin-top:150px;
+		}
+		.info{
+			border:1px solid black;
+			padding: 1px;
+			padding-left:4px;
+		}
+		
+		hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+		
+	</style>
+	
+    <title>Register</title>
+</head>
+
+<body>
+
+ <nav class="navbar navbar-expand-md navbar-light text-gray-700 body-font bg-gray-200 container-fluid">	
+    <span class="flex title-font font-medium items-center text-gray-900 mb-0 ml-0 md:mb-0 " id="logo">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSOs9y-Rohp00jwfpWBvXiOBiN9xsGFd3y13A&usqp=CAU" class="w-10 h-10 p-0 mt-2 mb-2  rounded-full logod" >
+      <span class="ml-1 mr-20 text-xl ">IIPE</span>
+    </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item hover:text-gray-900">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item hover:text-gray-900">
+                    <a class="nav-link" href="/">About</a>
+                </li>
+                <li class="nav-item hover:text-gray-900">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+            </ul>
+        </div>
+	</nav>
+
+<p class="title-font font-small text-3xl text-gray-500">
+	THE CURRENTLY LEADING CR VOTES ARE:
+</p>
+
+ <% mocr.forEach(function(element){%>
+  <p class="leading-relaxed mt-4"><%=element%></p>
+<%})%>
+
+
+<p class="title-font font-small text-3xl text-gray-500">
+	THE CURRENTLY LEADING GS VOTES ARE:
+</p>
+
+
+ <% mogs.forEach(function(element){%>
+<p class="leading-relaxed mt-4"><%=element%></p>
+<%})%>
