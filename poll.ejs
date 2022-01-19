@@ -1,0 +1,146 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+	<style>
+		.arrow{
+			display:inline;
+		}
+		input{
+			display:inline;
+		}
+		.vote-border{
+			border:1px dotted black;
+			padding: 4px;
+			margin-bottom:2px;
+			border-radius: 6px;
+		}
+
+	</style>
+    <title>polls</title>
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-expand-md navbar-light text-gray-700 body-font bg-gray-200 container-fluid">	
+    <span class="flex title-font font-medium items-center text-gray-900 mb-0 ml-0 md:mb-0 " id="logo">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSOs9y-Rohp00jwfpWBvXiOBiN9xsGFd3y13A&usqp=CAU" class="w-10 h-10 p-0 mt-2 mb-2  rounded-full logod" >
+      <span class="ml-1 mr-20 text-xl ">IIPE</span>
+    </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item hover:text-gray-900">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item hover:text-gray-900">
+                    <a class="nav-link" href="/">About</a>
+                </li>
+                <li class="nav-item hover:text-gray-900">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+            </ul>
+          	      <div class="lg:w-2/5 inline-flex lg:justify-end mr-10 lg:ml-0">
+      <a href="/log" class=" btn inline-flex items-center border-0 py-1 px-1 focus:outline-none hover:bg-gray-400 rounded text-base mt-0 md:mt-0">
+		  Auth Login
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1 arrow" viewBox="0 0 24     24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+        </div>
+	</nav>
+
+	<!-- <div class="container">
+		<form class="ui form container-fluid px-50" action="/submit" method="post">
+  <div class="field">
+  	 
+	Voter: <input type="text" name="user" value=<%=mail%> readonly class="voter" >
+  </div>
+  <div class="field">
+	<p>
+		VOTE FOR GS BELOW.
+	</p>
+	 <label>KIRAN</label>
+	<input type="radio" name="gs" value="KIRAN">
+	<label>SUMAN</label>
+	<input type="radio" name="gs" value="SUMAN">
+  </div>
+  <div class="field">
+	      <p>
+		VOTE FOR CR BELOW.
+	</p>
+	 <label>VIKRAM</label>
+	<input type="radio" name="cr" value="VIKRAM">
+	<label>SATYA</label>
+	<input type="radio" name="cr" value="SATYA">
+	  
+ </div>			
+			
+  <button class="ui button" type="submit">Submit</button>
+</form>
+	</div> -->
+	
+	<div class="container mt-5 ">
+<form action="/submit" method="post">
+
+	<div class="ui form">
+  <div class="grouped fields">
+	  Voter: <input type="text" name="user" value=<%=mail%> readonly class="voter" >
+	  <hr>
+	  <div class="vote-border">
+    <label class="mt-2">Vote for CR below</label>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" value="VIKRAM" name="cr">
+        <label>VIKRAM</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" value="SATYA" name="cr">
+        <label>SATYA</label>
+      </div>
+    </div>
+	  <hr>
+	  <label>Vote for GS below</label>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" value="SUMAN" name="gs">
+        <label>SUMAN</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" value="KIRAN" name="gs">
+        <label>KIRAN</label>
+      </div>
+    </div>
+	  </div><hr>
+		  <button class="ui positive left floated button" type="submit">Submit</button>
+		  
+  </div>
+</div>
+			
+		</form>		
+	</div>
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+	   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
